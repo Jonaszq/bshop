@@ -7,4 +7,16 @@ export default defineConfig({
   plugins: [react(),
     tailwindcss(),
   ],
+  server: {
+    fs: {
+      allow: ['.']
+    },
+    proxy: {
+      '/api': {
+        target: 'https://api.net-pocket.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '/api')
+      }
+    }
+  }
 })

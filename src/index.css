@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+.bg-app{
+    background: linear-gradient(rgb(46, 46, 46), rgb(0, 0, 0));
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
